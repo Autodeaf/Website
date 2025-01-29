@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mogtion - Professional Video Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  /* Enhanced CSS with Your Requests */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #000;
+  }
+
+  /* Smart Video Background Control */
+  #video-background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 0.5s;
+  }
+
+  /* Modern Header */
+  header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Premium Button Design */
+  .btn {
+    background: linear-gradient(135deg, #ff0000, #8b0000);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+  }
+
+  /* Clean Grid Layout */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .portfolio-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Mobile-First Design */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header nav {
+      margin-top: 1rem;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+
+  /* AI Chat Interface */
+  .chat-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+
+  .chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop id="video-background">
+    <source src="Video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Initialize Animations
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // Video Controls for Portfolio
+  document.querySelectorAll('.video-item video').forEach(video => {
+    video.addEventListener('mouseover', () => video.play());
+    video.addEventListener('mouseout', () => video.pause());
+  });
+
+  // Smooth Scroll for Navigation
+  document.querySelectorAll('header nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const section = document.querySelector(this.getAttribute('href'));
+      section.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.querySelector('.menu-icon').addEventListener('click', function() {
+  document.querySelector('nav').classList.toggle('active');
+});
+</script>
+  </video>
+
+  <!-- Header (Top Bar) -->
+  <header>
+    <div class="container">
+      <h1>Jävla slaver KEVIN</h1>
+      
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <!-- Updated Hero Section with Social Links -->
+<section class="hero">
+  <div class="container">
+    <h2 data-aos="fade-up">Professional Video Editor</h2>
+    <p data-aos="fade-up" data-aos-delay="200">Hollywood-Style Motion Graphics & 3D Animation</p>
+    <div class="social-links">
+      <a href="#" class="btn"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="btn"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="btn"><i class="fab fa-youtube"></i></a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+  <div class="container">
+    <h2>My Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-item" data-aos="zoom-in">
+        <i class="fas fa-film"></i>
+        <h3>Premiere Pro</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 63%"></div>
+        </div>
+      </div>
+      <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-cube"></i>
+        <h3>After Effects</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%"></div>
+        </div>
+      </div>
+      <div class="skill-item" data-aos="zoom-in">
+        <i class="fas fa-film"></i>
+        <h3>Work</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 50%"></div>
+        </div>
+      </div>
+      <div class="skill-item" data-aos="zoom-in">
+        <i class="fas fa-film"></i>
+        <i class="fas fa-film"></i>
+        <h3>2 Work</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 40%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Smart Video Control
+  const videoBg = document.getElementById('video-background');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    videoBg.style.opacity = 1 - scrolled / 500;
+  });
+
+  // AI Chat Functionality
+  function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const messages = document.getElementById('chat-messages');
+    
+    messages.innerHTML += `<div class="message user">${input.value}</div>`;
+    
+    // Add simple auto-reply
+    setTimeout(() => {
+      messages.innerHTML += `<div class="message bot">Thanks for your message! I'll respond soon.</div>`;
+    }, 1000);
+    
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  // Initialize animations
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a professional video editor with two years of experience in Premiere Pro, After Effects, and Photoshop. 
+        I specialize in color grading, sound effects, animation, and motion graphics. I love creating Hollywood-style 
+        visuals and 3D effects in After Effects. Videography is my passion, and I'm excited to help bring your ideas to life!
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="gallery">
+        <!-- Add your video clips here -->
+        <div class="video-item">
+          <video controls>
+            <source src="clip1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="clip2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Add more video items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="centered-container">
+    <h2>Professional Video Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-film service-icon"></i>
+        <h3>Premium Video Editing</h3>
+        <p>Hollywood-style editing with Adobe Premiere Pro including:
+          <br>- Scene transitions & timing
+          <br>- Multi-camera editing
+          <br>- Advanced color grading
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-magic service-icon"></i>
+        <h3>Motion Graphics</h3>
+        <p>After Effects expertise for:
+          <br>- Title animations
+          <br>- Visual effects
+          <br>- 3D element integration
+          <br>- Dynamic infographics
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-volume-up service-icon"></i>
+        <h3>Audio Enhancement</h3>
+        <p>Professional sound design:
+          <br>- Sound effect layering
+          <br>- Noise reduction
+          <br>- Dynamic range optimization
+          <br>- Voiceover synchronization
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Project Details" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Let's create something amazing together! Reach out to me for collaborations or job opportunities.</p>
+      <a href="mailto:kfranko600@example.com" class="btn">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jävla slaver KEVIN PREMUIM. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
